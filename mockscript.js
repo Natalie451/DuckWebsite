@@ -11,7 +11,23 @@ var nickNameFeedbackField = document.getElementById("nicknameFeedback");
 confirmBtn.addEventListener("click", function () {
   var realName = realNameInput.value;
   var duckNickname = duckNicknameInput.value;
-  finalNicknameField.value = realName + "" + duckNickname;
+  finalNicknameField.value = realName + "_" + duckNickname;
+  validateNickname(realName, duckNickname);
+});
+
+//This code will update the realName input field automatically while the user is typing.
+realNameInput.addEventListener("input", function () {
+  var realName = realNameInput.value;
+  var duckNickname = duckNicknameInput.value;
+  finalNicknameField.value = realName + "_" + duckNickname;
+  validateNickname(realName, duckNickname);
+});
+
+//This code will update the duck nickname input field automatically while the user is typing.
+duckNicknameInput.addEventListener("input", function () {
+  var realName = realNameInput.value;
+  var duckNickname = duckNicknameInput.value;
+  finalNicknameField.value = realName + "_" + duckNickname;
   validateNickname(realName, duckNickname);
 });
 
