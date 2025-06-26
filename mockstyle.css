@@ -18,7 +18,8 @@ body {
 }
 
 .selected {
-  border-color: green;
+  border: 4px solid green;
+  box-shadow: 0 0 5px green;
 }
 .student-info {
   margin-bottom: 20px;
